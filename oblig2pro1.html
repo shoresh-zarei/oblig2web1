@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<title>Oppgave 2</title>
+
+	<script type="text/javascript">
+		
+		window.onload = main;
+
+		function main() {
+
+			document.getElementById("btnRegister").onclick = register;
+		}
+
+		function register() {
+
+
+			var user = document.getElementById("username").value;
+			var pass = document.getElementById("password").value;
+
+			document.getElementById("checkname").innerHTML = "";
+			document.getElementById("checkpass").innerHTML = "";
+
+			console.log("user:" + "... " + user + " ...");
+			console.log("pass" + "... " + pass + " ...");
+
+
+			///////////////////////////////////////
+			if(user === "" && pass === "" ) {
+				document.getElementById("checkname").innerHTML = ":(";
+				document.getElementById("checkpass").innerHTML = ":(";
+			}
+			else if(user === "" ) {
+				document.getElementById("checkname").innerHTML = ":(";
+			}/////////////////////////////////////////////
+		    else if(pass ==="") {
+				document.getElementById("checkpass").innerHTML = ":(";
+				
+			}
+			else {
+				document.getElementById("checkname").innerHTML = ":)";
+				document.getElementById("checkpass").innerHTML = ":)"
+			}
+			//////////////////////////////////////////////
+		}
+
+	</script>
+
+
+</head>
+<body>
+	<div class="container">
+	  <section id="contanct-form" class="card">
+	  	<form>
+    	  <div>
+		    <label>Username</label>
+		    <input type="text" id="username" placeholder="e.g. Shoresh" /><span id="checkname"></span>
+	   	  </div>
+
+		  <div>
+		    <label>Password</label>
+		  	<input type="password" id="password" /><span id="checkpass"></span>
+	   	  </div>
+
+
+		  <div>
+		    <button type="button" id="btnRegister">Register</button>
+		    <p id="utskrift"></p>
+		  </div>
+		</form>
+	   	  </div>
+
+			
+		</section>
+
+</body>
+</html>
