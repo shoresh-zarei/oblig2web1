@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Oblig2pro4</title>
+        <meta charset="UTF-8" />
+        <script>
+			
+			window.onload = oppstart;
+			
+			function oppstart() {
+				var tid = new Date();
+				var time = tid.getHours();
+				var minutt = tid.getMinutes();
+				var sekund = tid.getSeconds();
+				var hilsen; 
+				
+				setInterval(oppstart, 1000);
+
+				document.getElementById("utskrift").innerHTML = tid.getHours() + ":" + tid.getMinutes() + ":" + tid.getSeconds();
+				
+
+				if(time < 7) {
+				   hilsen = "God morning";
+				} else if(time < 18) {
+					hilsen = "Good day";
+				} else {
+					hilsen = "good night";
+				}
+				document.getElementById("utskrift").innerHTML += hilsen;
+			}
+			
+		</script>
+	</head>
+	<body>
+		<p id="utskrift"></p>
+
+	</body>
+</html>

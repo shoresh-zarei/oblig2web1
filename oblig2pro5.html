@@ -1,0 +1,64 @@
+<!-- Shoresh Zarei -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>oblig2pro5</title>
+
+<script>
+    
+window.onload = oppstart;
+
+function oppstart(){
+        
+    	document.getElementById("btnSkrivut").onclick = magic;
+
+}
+
+
+
+function magic() {
+        var navn = document.getElementById("navn").value;
+        var alder = parseInt(document.getElementById("alder").value);
+        var hoeyde = parseInt(document.getElementById("hoeyde").value);
+        var kjonn = document.getElementById("kjonn").selectedIndex;
+        var valgt = 0;
+
+        if (kjonn === 0) {
+         valgt = navn.length * alder - hoeyde;
+        }
+        else {
+        valgt = alder * hoeyde - 3;
+
+
+        }
+        if (valgt % 2) {
+                document.getElementById("utskrift").innerHTML = "Det vil gå deg godt her i verden.For at spådommen skal gå i oppfyllelse, må du betale inn 100 kr til følgende kontonummer: 1234.12.12345";
+            }
+            else {
+                document.getElementById("utskrift").innerHTML = "Stakkars deg! Alt kommer til å gå deg galt.For at spådommen ikke skal gå i oppfyllelse, må du betale inn 100 kr til følgende kontonummer: 1234.12.12345";
+            }
+        }
+       
+
+
+</script>
+</head>
+
+
+
+<body>
+    <div>
+         <input type="text" id="navn" placeholder="Navn"><br>
+         <input type="number" id="alder" placeholder="Alder"><br>
+         <input type="number" id="hoeyde" placeholder="Høyde"><br>
+         <select id="kjonn">
+            <option value="0">Gutter</option>
+            <option value="1">Jenter</option>
+         </select><br/>
+         <button id="btnSkrivut" type="button">Skriv ut</button> 
+         <p id="utskrift">...............</p>
+   </div>
+</body>
+</html>

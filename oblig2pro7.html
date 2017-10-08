@@ -1,0 +1,121 @@
+<!-- Shoresh Zarei -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>oblig2pro7</title>
+		<script>
+
+
+			function tallrekke() {
+   				 document.getElementById("showList").innerHTML = "";
+  			      	var forlengs = document.getElementById("forlengs").checked;
+  				  	var baklengs = document.getElementById("baklengs").checked;
+    			 	 var dele2 = document.getElementById("dele2").checked;
+    			  	var delelig3 = document.getElementById("delelig3").checked;
+     			  	var partall = document.getElementById("partall").checked;
+    				var oddetall = document.getElementById("oddetall").checked;
+    				var annenhverposneg = document.getElementById("annenhverposneg").checked;
+    				var showList = document.getElementById("showList");
+   				    var b = true;
+ 
+   					 if (forlengs) {
+       					 for (var i = 0; i <= 100; i++) {
+           				 showList.innerHTML += i + "<br />";
+
+       					 }
+
+   		   			 }
+
+   					 if (baklengs) {
+       				 	for (var j = 100; j >= 0; j--) {
+           			 	showList.innerHTML += j + "<br />";
+
+       				 	}
+    				 }
+
+    				 if (dele2) {
+       					 for (var k = 0; k <= 100; k++) {
+           				 showList.innerHTML += (k / 2) + ', ';
+       					 }
+
+   					 }
+
+   					 if (delelig3) {
+       					 for (l = 0; l <= 100; l++) {
+           				 	if (l % 3 == 0) {
+               				    showList.innerHTML += l + "<br />";
+           				    }
+        			 	 }
+
+   					 }
+
+   					 if (partall) {
+       					 for (m = 2; m < 101; m++) {
+           					 if (m % 2 == 0) {
+               					 showList.innerHTML += m + "<br />";
+            				 }
+       					 }
+   					 }
+
+   					 if (oddetall) {
+      				     for (n = 1; n < 100; n += 2) {
+           					 showList.innerHTML += n + "<br />";
+
+       					 }
+   					 }
+
+   					 if (annenhverposneg) {
+      				     for (o = 0; o <= 100; o++) {
+           					 if (b == true) {
+                				 showList.innerHTML += o + "<br />";
+                				 b = false;
+           			 		 }
+           					 else {
+              				     showList.innerHTML += "-" + o + "<br />";
+               					 b = true;
+            				 }
+       					 }
+   					 }
+			}
+
+   		    function clearit() {
+       		    var tomListe = document.getElementById("showList");
+       		    var allRadio = document.getElementsByName("obl");
+
+       			 tomListe.innerHTML = "";
+
+       			 for (var i = 0; i < allRadio.length; i++) {
+           			 allRadio[i].checked = false;
+
+       			 }
+   		    }
+		</script>
+	</head>
+<body>
+	  <p>oblig2pro7</p>
+        <p>Skriv ut lister med tall mellom 0 og 100 :
+        <ul>
+            <li>Forlengs: 0,1,2,...,98,99,100</li>
+            <li>Baklengs: 100,99,98,...,1,0</li>
+            <li>Delt på 2: 0,0.5,...,49,49.5,50</li>
+            <li>Kun de som er delige på 3: 3,6,9...99 (Tips: Her kan man prøve %-operatoren)</li>
+            <li>Partall: 2,4,6,8,...98,100</li>
+            <li>Oddetall: 1,3,5,...,97,99</li>
+            <li>Annenhvert tall positivt og negativt: 0,-1,2,-3,4,-5,...,-99,100</li>
+        </ul>
+        <div id='oblig2pro7'>
+            <input type="radio" name="op" id="forlengs">Forlengs<br />
+            <input type="radio" name="op" id="baklengs">Baklengs<br />
+            <input type="radio" name="op" id="dele2">Delt på 2<br />
+            <input type="radio" name="op" id="delelig3">Delelig med 3<br />
+            <input type="radio" name="op" id="partall">Partall<br />
+            <input type="radio" name="op" id="oddetall">Oddetall<br />
+            <input type="radio" name="op" id="annenhverposneg">Annenhver positiv og negativ<br />
+            <input type="button" onclick="tallrekke();" value="Show">
+            <input type="button" onclick="clearit();" value="Simply"><br />
+            <span id="showList"></span>
+        </div>
+
+</body>
+</html>
