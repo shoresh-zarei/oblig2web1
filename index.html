@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Norsk Natur</title>
+        <meta charset="UTF-8" />
+        <script>
+		
+			window.onload = oppstart;
+			
+			function oppstart() {
+				var tid = new Date();
+		
+				document.getElementById("utskrift").innerHTML = tid.getHours() + ":" + tid.getMinutes() + ":" + tid.getSeconds();
+				
+				setTimeout(oppstart,1000);
+			}
+			
+		</script>
+   
+	
+	    <link rel="stylesheet" type="text/css" href="style.css">
+
+    </head>
+
+<body>
+	<div style="background-color: black;color: white;padding: 100px;">
+		<header>
+			<h1>Norsknatur</h1>
+		</header>
+
+         </body>
+		<nav>
+			<ul>
+				<li><a href="norsknatur.html">Hjem</a></li>
+				<li><a href="Nyheter.html#xc60">Nyheter</a></li>
+				<li><a href="Om.html">Om</a></li>
+				<li><a href="Kontakt.html">Kontakt</a>
+                    <ul>
+				        <li><a href="#">E-post</a>
+                        <li><a href="#">Post</a>
+                    </ul>
+                </li>
+				<li><a href="Områder.html">Områder</a>
+					<ul>
+						<li><a href="#">Østfold</a>
+						<li><a href="#">Norden</a>
+						<li><a href="Fredrikstad.html">Fredrikstad</a>
+						<li><a href="#">Sør</a>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		
+		<a href="Fredrikstad.html"><div class="floating-box" id="fb1">NATURE BIJOUX</div></a>
+		<div class="floating-box" id="fb2">HELLAS</div>
+		<div class="floating-box" id="fb3">HAVE</div>
+		<article>
+			<p style="color:aqua;"> Naturen er fint, men norsk natur er fantastisk.</p>
+		</article>
+    <aside>
+        <section>
+            <h1>Links</h1>
+            <ul>
+                <li><a href="http://www.wwf.no//">Besøk wwf.no</a></li>
+                <li><a href="http://www.discovergreece.com/el/nature//">Besøk el/nature</a></li> 
+				</a></li>
+				<li><a href="http://www.saradistribution.com/natureofkurdistan.htm//">Besøk Kurdistan</a></li>
+            </ul>
+        </section>
+        <figure>
+            <img width="85" height="85" 
+                <img src="/data_images/wallpapers/aek1.jpg" alt="Aek" title="Aek"> 
+                
+            <figcaption>Shoresh Zarei</figcaption>
+        </figure>
+    </aside>
+		<footer>
+			<p>Kontaktinfo, Gate 23A, 1718 Byen, 1718Greåker</p>
+		</footer>
+	
+	</div>
+
+</body>
+
+</html>

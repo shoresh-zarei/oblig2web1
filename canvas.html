@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <title>Testside</title>
+        <script>
+        
+        
+        window.onload = oppstart;
+            
+           
+        function oppstart() {
+            setInterval(tegn,100);
+           
+                
+        }
+            
+        function tegn() {
+            var ctx = document.getElementById("tegneflate").getContext("2d");
+                
+            ctx.beginPath();
+            ctx.moveTo(50, 100);
+            ctx.lineTo(300, 250);
+            ctx.stroke();
+                
+            tall = tall + 5;
+                
+           
+       }
+            
+           
+            
+            
+            
+        </script>
+        <style>
+            #tegneflate {
+                border-style: solid;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas width="400" height="400"><</canvas>
+    </body
+</html>
+
